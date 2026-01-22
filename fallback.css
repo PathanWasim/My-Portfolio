@@ -1,0 +1,46 @@
+/* Fallback styles for devices that can't handle 3D */
+.no-webgl .experience {
+    background: linear-gradient(135deg, #FAF4E5 0%, #e5a1aa 50%, #8395CD 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-webgl .experience-canvas {
+    display: none;
+}
+
+.no-webgl .experience::after {
+    content: '🚀';
+    font-size: 4rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+/* Simplified animations for low-end devices */
+@media (max-width: 480px) {
+    .circle {
+        animation-duration: 3s;
+    }
+
+    .section-margin {
+        height: 2000px;
+        /* Reduce scroll distance */
+    }
+
+    .section {
+        padding: 500px 4%;
+        /* Reduce padding */
+    }
+}

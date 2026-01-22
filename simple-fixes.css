@@ -1,0 +1,69 @@
+/* Simple Performance Fixes */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Basic GPU acceleration for canvas */
+.experience-canvas {
+    transform: translateZ(0);
+}
+
+/* Reduce excessive spacing */
+.footer {
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
+/* Ensure no extra space after footer */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* Fix any overflow issues */
+.page-wrapper {
+    overflow-x: hidden;
+}
+
+/* Prevent auto-refresh by fixing scroll behavior */
+.page {
+    height: auto;
+    overflow: visible;
+}
+
+/* Ensure proper scroll container */
+html,
+body {
+    height: auto;
+    overflow-x: hidden;
+}
+
+/* Fix scroll issues */
+.page-wrapper {
+    min-height: 100vh;
+}
+
+/* Prevent scroll loop at end */
+.page-end {
+    height: 100px;
+    width: 100%;
+    background: transparent;
+}
+
+/* Ensure footer is the actual end */
+.footer {
+    position: relative;
+    z-index: 10;
+}
+
+/* Fix scroll trigger issues */
+.page {
+    position: relative;
+}
+
+/* Ensure smooth scroll transitions */
+* {
+    scroll-behavior: smooth;
+}
